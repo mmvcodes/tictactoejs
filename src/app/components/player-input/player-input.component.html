@@ -1,0 +1,25 @@
+<div class="input-container">
+  <form>
+    <div class="input-group">
+      <label>Player 1</label>
+      <input type="text" [(ngModel)]="name1" name="p1" [disabled]="game.gameStarted" />
+    </div>
+
+    <div class="input-group">
+      <label>Player 2</label>
+      <input type="text" [(ngModel)]="name2" name="p2" [disabled]="game.gameStarted" />
+    </div>
+
+    <div class="button-group">
+      <button type="button" (click)="submit()" [disabled]="game.gameStarted">Submit</button>
+      <button type="button" (click)="restart()">Restart</button>
+    </div>
+  </form>
+
+  <div class="error-banner" *ngIf="error">{{ error }}</div>
+
+  <div *ngIf="showBanner" class="golden-banner">
+    <p>Please enter two valid player names to start the game.</p>
+    <button (click)="closeBanner()">Continue</button>
+  </div>
+</div>

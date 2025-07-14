@@ -1,0 +1,33 @@
+.scoreboard {
+  background-color: #1b1b2f;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.header {
+  font-weight: bold;
+  background-color: #333;
+  margin-bottom: 10px;
+}
+
+.dark-row {
+  background-color: #2a2a40;
+}
+
+.light-row {
+  background-color: #3d3d5c;
+  margin-top: 5px;
+}

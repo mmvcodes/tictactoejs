@@ -1,0 +1,18 @@
+<div class="scoreboard">
+  <h2>Scoreboard</h2>
+  <p>Round: {{ game.round }}/{{ game.maxRounds }}</p>
+
+  <div class="score-row header">
+    <span>Player</span>
+    <span>Score</span>
+  </div>
+
+  <div class="score-row dark-row">
+    <span>{{ game.players[0] || 'Player 1' }}</span>
+    <span>{{ game.scores[0] }}</span>
+  </div>
+  <div class="score-row light-row">
+    <span>{{ game.players[1] || 'Player 2' }}</span>
+    <span>{{ game.scores[1] }}</span>
+  </div>
+</div>

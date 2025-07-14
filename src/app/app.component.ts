@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ScoreboardComponent } from './components/scoreboard/scoreboard.component';
+import { GameComponent } from './components/game/game.component';
+import { PlayerInputComponent } from './components/player-input/player-input.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    ScoreboardComponent,
+    GameComponent,
+    PlayerInputComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'tictactoe-js';
-}
+export class AppComponent {}

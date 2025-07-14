@@ -1,0 +1,19 @@
+
+<div class="game-container">
+    <h1 class="game-title">Tic Tac Toe</h1>
+
+  <div class="board">
+    
+    <div
+      *ngFor="let cell of game.board; index as i"
+      class="cell"
+      [ngClass]="cell"
+      (click)="onCellClick(i)">
+      <span *ngIf="cell">{{ cell }}</span>
+    </div>
+  </div>
+
+  <div *ngIf="game.winnerBanner" class="banner">
+    {{ game.winnerBanner }} - Round {{ game.round }}/{{ game.maxRounds }}
+  </div>
+</div>
